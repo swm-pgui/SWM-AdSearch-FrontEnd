@@ -1,0 +1,102 @@
+{
+    "header": {
+        "resultCode": "00",
+        "resultMsg": "NORMAL SERVICE."
+    },
+    "body": {
+        "pageNo": 1,
+        "totalCount": 10860,
+        "numOfRows": 10,
+        "items": [{
+            "PRDUCT": "쇼킹홀쭉이",
+            "ENTRPS": "(주)마더스팜",
+            "ADRES1": "서울특별시 금천구 벚꽃로56길 96(가산동,지상1층)",
+            "FOUND_CN": "www.vitamall.co.kr (판매업소: 쇼킹홀쭉이)",
+            "DSPS_DT": null,
+            "DSPS_CMMND": null,
+            "VIOLT": null,
+            "EVDNC_FILE": "0"
+        }, {
+            "PRDUCT": "다움케일",
+            "ENTRPS": "해피생활건강",
+            "ADRES1": "강원도 원주시 감영길 36-1(지상1층 중앙동)",
+            "FOUND_CN": "김해중부경찰서로부터 2010.7.27-2011.11.21까지 비겐생명공학 판매장에서 의약품으로 오인혼동할 우려가 있는 내용의 광고를 하였다고 수사결과 통보",
+            "DSPS_DT": "20150610",
+            "DSPS_CMMND": "영업정지1월",
+            "VIOLT": "건강기능식품에관한법률시행규칙 별표5 1호 마목",
+            "EVDNC_FILE": "0"
+        }, {
+            "PRDUCT": "\"어덜리스무쓰 핸드크림 57g \nX 5개\",어덜리스무쓰 어더크림 237g,어덜리스무쓰 어더크림 57g (핸드크림 겸용) ,어덜리스무쓰 어더크림 340g",
+            "ENTRPS": "(주)원페이스",
+            "ADRES1": "서울특별시 송파구 송파대로 167(문정역테라타워 A동 9층 921호 문정동)",
+            "FOUND_CN": "http://www.oneface.co.kr(업소명: (주)원페이스)",
+            "DSPS_DT": null,
+            "DSPS_CMMND": null,
+            "VIOLT": null,
+            "EVDNC_FILE": "0"
+        }, {
+            "PRDUCT": "로니페롤환",
+            "ENTRPS": "공감",
+            "ADRES1": "강원도 원주시 단관길 139(3층 관설동)",
+            "FOUND_CN": "네이버 배너광고를 보고 신고\r\n인터넷 싸이트(http://ad1.eventmanager.co.kr/CODE_NAME=RONIPEROL&MEDIA _CODE =2beon_donga_txt)를 통해\r\n로니페롤 광고함.\r\n전화상담원을통해 구매처 신청하는 싸이트를 받아 판매자의 홈페이지는 베스트앤쇼핑이었음\r\n",
+            "DSPS_DT": "20150617",
+            "DSPS_CMMND": "수사결과 통보 <원주경찰서 수사과-3102(2015.6.16)>\n\" 이덕재가 로니페롤환에 대하여 판매를 하기위해 광고제작을 하려하였으나 광고제작도중 구글싸이트에 노출된것으로 이덕재가 로니페롤환을 판매하기전\n중단하여 판매실적 또한 없다고 하기에 수사 실익없어 입건하지 않았음\" 라고 수사결과 통보함",
+            "VIOLT": "식품위생법시행규칙 제8조(허위표시, 과대광고 및 과대포장의 범위)①항3호",
+            "EVDNC_FILE": "0"
+        }, {
+            "PRDUCT": "종근당 콜라겐 플러스,유니플렌",
+            "ENTRPS": "스마트",
+            "ADRES1": "대전광역시 서구 대덕대로 164(갈마동,1층)",
+            "FOUND_CN": "http://www.11st.co.kr/product/SellerProductDetail.tmall?method=getSellerProductDetail&prdNo=1184136750&trTypeCd=21&trCtgrNo=129543",
+            "DSPS_DT": "20150415",
+            "DSPS_CMMND": "영업정지 15일(2015.4.21.~2015.5.5.)",
+            "VIOLT": null,
+            "EVDNC_FILE": "0"
+        }, {
+            "PRDUCT": "백년초 내추럴 바디로션",
+            "ENTRPS": "박부자",
+            "ADRES1": "서울특별시 송파구 거마로22길 23-1(마천동)",
+            "FOUND_CN": "http://www.11st.co.kr/product/SellerProductDetail.tmall?method=getSellerProductDetail&xfrom=search^prd&prdNo=1234833210&trTypeCd=21&trCtgrNo=585021&lCtgrNo=14610&mCtgrNo=930637(상호:소망화장품)",
+            "DSPS_DT": null,
+            "DSPS_CMMND": null,
+            "VIOLT": null,
+            "EVDNC_FILE": "0"
+        }, {
+            "PRDUCT": "홈 에스테틱 케어 세트",
+            "ENTRPS": "(주)마더스팜",
+            "ADRES1": "서울특별시 금천구 벚꽃로56길 96(가산동,1층)",
+            "FOUND_CN": "http://www.vitamall.co.kr/index.html?branduid=449596&ref=naver_open&NaPm=ct%3Di8tg7yqw%7Cci%3D1d3317cff90add9fcbaf2b0dae7e272acc1a3ed4%7Ctr%3Dslsl%7Csn%3D11407%7Chk%3De759fd801997e268d00c540d797211a1d02d7f22(상호:마더스팜)",
+            "DSPS_DT": null,
+            "DSPS_CMMND": null,
+            "VIOLT": null,
+            "EVDNC_FILE": "0"
+        }, {
+            "PRDUCT": "더싹풋샴푸",
+            "ENTRPS": "(주)텐바이텐",
+            "ADRES1": "서울특별시 종로구 대학로 57(홍익대학교대학로캠퍼스 14층 연건동)",
+            "FOUND_CN": "http://www.10x10.co.kr/shopping/category_prd.asp?itemid=1241297&rdsite=nvshop_sp&NaPm=ct%3Di911k2ko%7Cci%3Dee3fd3634e2d4e3a1ae0833ac6fdc8229e61fc25%7Ctr%3Dslsl%7Csn%3D219718%7Chk%3D46416b2b206c4d206baa8e6e5afa8d0be55ff30c(상호:엠제이엠)",
+            "DSPS_DT": null,
+            "DSPS_CMMND": null,
+            "VIOLT": null,
+            "EVDNC_FILE": "0"
+        }, {
+            "PRDUCT": "청정지역 자연산 민들레즙",
+            "ENTRPS": "농업회사법인(주)유기농마루",
+            "ADRES1": "광주광역시 광산구 첨단중앙로182번길 60(2층 쌍암동)",
+            "FOUND_CN": null,
+            "DSPS_DT": "20150508",
+            "DSPS_CMMND": null,
+            "VIOLT": "식품위생법시행규칙 제8조(허위표시, 과대광고 및 과대포장의 범위)①항13호",
+            "EVDNC_FILE": "0"
+        }, {
+            "PRDUCT": "여러가지쑥 진액",
+            "ENTRPS": "대성식품",
+            "ADRES1": "경상북도 경산시 박사강변로 185-25",
+            "FOUND_CN": null,
+            "DSPS_DT": "20150603",
+            "DSPS_CMMND": "영업정지 15일에 해당하는 과징금 4,650천원 부과",
+            "VIOLT": null,
+            "EVDNC_FILE": "0"
+        }]
+    }
+}
