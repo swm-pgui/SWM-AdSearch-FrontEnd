@@ -6,6 +6,7 @@ import SearchCard from '../components/SearchCard';
 import CardData from '../datas/CardData.json';
 
 import {useLocation, useHistory} from "react-router";
+import logo from '../logo.png';
 
 const { Search } = Input;
 
@@ -17,8 +18,7 @@ const SearchContainer = () => {
 
     const Search_Query = location.state.Query;
 
-    const [Items_1, setItems_1] = useState([]);
-    const [Items_2, setItems_2] = useState([]);
+    const [Items, setItems] = useState([]);
 
     const [Query, setQuery] = useState('');
 
@@ -30,25 +30,30 @@ const SearchContainer = () => {
     useEffect(() => {
         console.log(Search_Query);
 
-        let items1 = [];
-        let items2 = [];
+        let items = [];
 
         for (var i = 0; i < Data.length; i++) {
-            if (Data[i].PRDUCT.indexOf(Search_Query) !== -1) items1.push(Data[i]);
-            if (Data[i].ENTRPS.indexOf(Search_Query) !== -1) items2.push(Data[i]);
+            if (Data[i].PRDUCT.indexOf(Search_Query) !== -1 || Data[i].ENTRPS.indexOf(Search_Query) !== -1) items.push(Data[i]);
         }
 
-        setItems_1(items1);
-        setItems_2(items2);
+        setItems(items);
     }, [Search_Query]);
 
 
     return (
         <Fragment>
             <div>
+                <Link to='/'>
+                    <img
+                        src={ logo }
+                        width='200'
+                        height='60'
+                        alt='AdSearch'
+                    />
+                </Link>
             <Search
                 size='large'
-                placeholder="검색"
+                placeholder={Search_Query}
                 onSearch={() => {history.push({
                     pathname: "/search",
                     state: {Query: Query}
@@ -58,24 +63,14 @@ const SearchContainer = () => {
             />
             </div>
             <div>
-                <h1>해당하는 제품명</h1>
+                <h1>해당하는 제품, 기업들</h1>
             </div>
             <div style={{ alignItems: 'center', justifyContent: 'center', width: 700 }}>
-                {Items_1.length > 0 ? 
-                Items_1.map((data) => {
+                {Items.length > 0 ? 
+                Items.map((data) => {
                     return <SearchCard data={data} />
                 })
                 : <h2>해당하는 제품이 없습니다...</h2>}
-            </div>
-            <div>
-                <h1>해당하는 기업명</h1>
-            </div>
-            <div style={{ alignItems: 'center', justifyContent: 'center', width: 700 }}>
-                {Items_2.length > 0 ? 
-                Items_2.map((data) => {
-                    return <SearchCard data={data} />
-                })
-                : <h2>해당하는 기업이 없습니다...</h2>}
             </div>
         </Fragment>
     );
