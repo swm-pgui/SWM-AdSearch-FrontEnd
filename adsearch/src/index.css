@@ -5,7 +5,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#65799B+15,17ead9+15,6078ea+100 */
   background: #65799B; /* Old browsers */
   background: -moz-linear-gradient(-45deg, #65799B 15%, #65799B 15%, #5E2563 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #65799B 15%,#65799B 15%,#5E2563 100%); /* Chrome10-25,Safari5.1-6 */
