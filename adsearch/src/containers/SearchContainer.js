@@ -70,14 +70,20 @@ const SearchContainer = () => {
                     </div>
                     <div className="ResultBox">
                         <div>
-                            <h1>검색 결과</h1>
+                            <h1>검색 결과 {Items.length}개</h1>
                         </div>
                         <div style={{ alignItems: 'center', justifyContent: 'center', width: 1200 }}>
                             {Items.length > 0 ? 
                             Items.map((data) => {
                                 return <SearchCard data={data} />
                             })
-                            : <h2>해당하는 제품이 없습니다...</h2>}
+                            : <div>
+                                <h3><strong>{Search_Query}</strong>와(과) 일치하는 검색결과가 없습니다.</h3>
+                                <ul>
+                                    <li>모든 단어의 철자가 정확한지 확인하세요.</li>
+                                    <li>다른 검색어를 사용해 보세요.</li>
+                                </ul>
+                            </div>}
                         
                         </div>
                     </div>
