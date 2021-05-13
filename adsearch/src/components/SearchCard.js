@@ -8,7 +8,7 @@ const SearchCard = ({ data }) => {
         <div>
         <div className="card-image"></div>
         <div className="card-text" style={{border: '1px solid black'}}>
-            <h2>{PRDUCT}</h2>
+            <h1>{PRDUCT}</h1>
             <h2>{ENTRPS}</h2>
         </div>
         </div>
