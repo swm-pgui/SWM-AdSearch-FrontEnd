@@ -80,7 +80,7 @@ const SearchContainer = () => {
                                 state: {Query: Query}
                             })}}
                             onChange={handleQuery}
-                            style={{ width: 500 }}
+                            style={{ width: 1200 }}
                         />
                     </div>
                     <div className="ResultBox">
