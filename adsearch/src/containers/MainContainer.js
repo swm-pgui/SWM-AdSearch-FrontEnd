@@ -1,10 +1,12 @@
 import React, { Fragment, useState } from 'react';
 import { Input } from 'antd';
-import { Link } from 'react-router-dom'
-
-import SearchCard from '../components/SearchCard';
-import CardData from '../datas/CardData.json';
 import {useHistory} from "react-router";
+
+import './MainContainer.css';
+import 'antd/dist/antd.css';
+import logo from '../logo.png';
+
+import './MainContainer.css';
 
 const { Search } = Input;
 
@@ -19,17 +21,30 @@ const MainContainer = () => {
 
     return (
         <Fragment>
-            <div>
-                <Search
-                    size='large'
-                    placeholder="검색"
-                    onSearch={() => {history.push({
-                        pathname: "/search",
-                        state: {Query: Query}
-                      })}}
-                    onChange={handleQuery}
-                    style={{ width: 500 }}
-                />
+            <div className="App">
+                <div className="main">
+                    <div className="LogoBox">
+                        <img src={logo} className="Logo" />
+                    </div>
+                    <div>
+                        <Search
+                            size='large'
+                            placeholder="검색"
+                            onSearch={() => {history.push({
+                                pathname: "/search",
+                                state: {Query: Query}
+                            })}}
+                            onChange={handleQuery}
+                            style={{ width: 1000 }}
+                        />
+                    </div>
+                    <div className="Description">
+                    <p>AdSearch를 통해 제품이 허위·과장광고로 처벌받은 이력이 있는지 검색해보세요!</p>
+                    </div>
+                </div>
+                <div className="footer">
+                    
+                </div>
             </div>
         </Fragment>
     );

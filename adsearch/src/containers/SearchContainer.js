@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import SearchCard from '../components/SearchCard';
 import CardData from '../datas/CardData.json';
+
 import {useLocation, useHistory} from "react-router";
 
 const { Search } = Input;
@@ -13,6 +14,7 @@ const Data = CardData.body.items;
 const SearchContainer = () => {
     const history = useHistory();
     const location = useLocation();
+
     const Search_Query = location.state.Query;
 
     const [Items_1, setItems_1] = useState([]);
