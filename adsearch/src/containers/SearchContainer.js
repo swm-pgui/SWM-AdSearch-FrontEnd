@@ -104,7 +104,7 @@ const SearchContainer = () => {
                     </div>
                     <div>
                     {Items.length > ResultCnt ?
-                    <Button block onClick={handleResultCnt}>
+                    <Button block onClick={handleResultCnt} style={{marginBottom: 24}}>
                         더 찾아보기
                     </Button>
                     : ""}
