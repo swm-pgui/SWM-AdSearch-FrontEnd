@@ -21,7 +21,9 @@
 ### 사용 라이브러리
 
 [Ant Design | UI/UX 디자인](https://ant.design/)
+
 [G2Plot | 차트 생성](https://g2plot.antv.vision/)
+
 [axios | API 통신](https://github.com/axios/axios)
 
 ## 👯 FrontEnd
