@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import SearchCard from '../components/SearchCard';
-import CardData from '../datas/CardData.json';
+import AllData from '../datas/AllData.json';
 
 import {useLocation, useHistory} from "react-router";
 import logo from '../logo.png';
@@ -22,7 +22,6 @@ const SearchContainer = () => {
     const Search_Query = location.state.Query;
 
     const [Items, setItems] = useState([]);
-    const [Data, setData] = useState([]);
     const [PrintItems, setPrintItems] = useState([]);
 
     const [Query, setQuery] = useState('');
@@ -49,10 +48,8 @@ const SearchContainer = () => {
     useEffect(() => {
         console.log(Search_Query);
 
-
-        const fetchDatas = async () => {
-            window
-            .fetch('http://bonggeun.com:8080/search?query=' + location.state.Query)
+        window
+            .fetch('https://bonggeun.com:8080/search?query=' + location.state.Query)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -60,14 +57,17 @@ const SearchContainer = () => {
             })
             .catch((error) => {
                 console.log(error);
+                let items = [];
+
+                for (var i = 0; i < AllData.length; i++) {
+                    if (AllData[i]['name'].indexOf(Search_Query) !== -1 || AllData[i]['company'].indexOf(Search_Query) !== -1) items.push(AllData[i]);
+                }
+
+                setResultCnt(5);
+                setItems(items);
             });
-        }
 
-        fetchDatas();
-        console.log(Data);
-
-        setResultCnt(5);
-        //setItems(Data);
+        
     }, [Search_Query]);
 
 
