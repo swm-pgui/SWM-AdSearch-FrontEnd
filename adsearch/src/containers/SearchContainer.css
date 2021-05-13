@@ -1,0 +1,52 @@
+.SearchApp {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+
+    width: 100%;
+    height: 100%;
+
+    background: #65799B; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #65799B 15%, #65799B 15%, #5E2563 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #65799B 15%,#65799B 15%,#5E2563 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #65799B 15%,#65799B 15%,#5E2563 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65799B', endColorstr='#5E2563',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.LeftSide{
+    grid-column: 1;
+    text-align: center;
+}
+
+.MiddleSide{
+    grid-column: 2;
+    background-color: white;
+}
+
+.RightSide{
+    grid-column: 3;
+}
+
+.SubSearchBar{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+
+    text-align: left;
+}
+
+.SubLogo{
+    height: 40px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ResultBox{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}

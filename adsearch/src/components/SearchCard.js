@@ -1,13 +1,14 @@
 import React from 'react';
+import './SearchCard.css';
 
 
 const SearchCard = ({ data }) => {
     const { PRDUCT, ENTRPS, ADRES1, FOUND_CN, DSPS_DT, DSPS_CMMND, VIOLT, EVDNC_FILE } = data;
 
     return (
-        <div>
+        <div className="CardBox">
         <div className="card-image"></div>
-        <div className="card-text" style={{border: '1px solid black'}}>
+        <div className="card-text">
             <h3>제품명 : {PRDUCT}</h3>
             <h3>업체명 : {ENTRPS}</h3>
             {ADRES1 != null ? <h3>주소 : {ADRES1}</h3> : ""}

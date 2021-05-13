@@ -1,0 +1,9 @@
+.CardBox{
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: medium solid lightgrey;
+    border-radius: 10px 10px 10px 10px;
+    word-break: break-all;
+}
