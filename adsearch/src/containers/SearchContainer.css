@@ -17,17 +17,17 @@
 }
 .LeftSide {
 	grid-column: 1;
+	height: 100vh;
 	text-align: center;
-    height: 100vh;
 }
 .MiddleSide {
 	background-color: white;
 	grid-column: 2;
-    height: 100%;
+	height: 100%;
 }
 .RightSide {
 	grid-column: 3;
-    height: 100vh;
+	height: 100vh;
 }
 .SubSearchBar {
 	margin-bottom: 30px;
