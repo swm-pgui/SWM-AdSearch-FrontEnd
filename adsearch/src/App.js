@@ -7,6 +7,7 @@ import SearchContainer from './containers/SearchContainer';
 const App = () => {
   return (
     <div>
+      <h1 className='App'>식품 허위 · 과대광고정보 알리미</h1>
       <SearchContainer />
     </div>
   )

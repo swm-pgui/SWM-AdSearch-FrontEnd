@@ -11,7 +11,8 @@ const SearchContainer = () => {
     const Data = CardData.body.items;
     const [Query, setQuery] = useState('');
 
-    const [Items, setItems] = useState();
+    const [Items_1, setItems_1] = useState();
+    const [Items_2, setItems_2] = useState();
 
     const handleQuery = (e) => {
         setQuery(e.target.value);
@@ -19,27 +20,40 @@ const SearchContainer = () => {
 
     const handleSearchButton = () => {
         console.log(Query);
-        let items = [];
+        let items1 = [];
+        let items2 = [];
         for (var i = 0; i < Data.length; i++) {
-            if (Data[i].PRDUCT.indexOf(Query) != -1) {
-                items.push(Data[i]);
-            }
+            if (Data[i].PRDUCT.indexOf(Query) != -1) items1.push(Data[i]);
+            if (Data[i].ENTRPS.indexOf(Query) != -1) items2.push(Data[i]);
         }
-        setItems(items);
+        setItems_1(items1);
+        setItems_2(items2);
     };
 
     return (
         <Fragment>
             <div>
                 <Search
+                    size='large'
                     placeholder="검색"
                     onSearch={handleSearchButton}
                     onChange={handleQuery}
-                    style={{ width: 300 }}
+                    style={{ width: 500 }}
                 />
             </div>
             <div>
-                {Items && Items.map((data) => {
+                <h1>해당하는 제품명</h1>
+            </div>
+            <div>
+                {Items_1 && Items_1.map((data) => {
+                    return <SearchCard data={data} />
+                })}
+            </div>
+            <div>
+                <h1>해당하는 기업명</h1>
+            </div>
+            <div>
+                {Items_2 && Items_2.map((data) => {
                     return <SearchCard data={data} />
                 })}
             </div>
