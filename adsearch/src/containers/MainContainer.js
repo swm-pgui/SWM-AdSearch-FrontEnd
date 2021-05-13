@@ -39,7 +39,7 @@ const MainContainer = () => {
                         />
                     </div>
                     <div className="Description">
-                    <p>AdSearch를 통해 제품이 허위·과장광고로 처벌받은 이력이 있는지 검색해보세요!</p>
+                    <p>AdSearch를 통해 제품 또는 기업이 허위·과장광고로 적발된 이력이 있는지 검색해보세요!</p>
                     </div>
                 </div>
                     <div className="About">
