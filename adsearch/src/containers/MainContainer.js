@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { Input } from 'antd';
+import { Button, Input } from 'antd';
 import {useHistory} from "react-router";
 
 import './MainContainer.css';
@@ -29,7 +29,7 @@ const MainContainer = () => {
                     <div>
                         <Search
                             size='large'
-                            placeholder="검색"
+                            placeholder="AdSearch 검색"
                             onSearch={() => {history.push({
                                 pathname: "/search",
                                 state: {Query: Query}
@@ -42,6 +42,11 @@ const MainContainer = () => {
                     <p>AdSearch를 통해 제품이 허위·과장광고로 처벌받은 이력이 있는지 검색해보세요!</p>
                     </div>
                 </div>
+                    <div className="About">
+                        <Button type="default" shape="round" size="large">
+                            AdSearch 더 알아보기
+                        </Button>
+                    </div>
                 <div className="footer">
                     
                 </div>

@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { Input } from 'antd';
+import { Input, Button } from 'antd';
 import { Link } from 'react-router-dom'
 
 import SearchCard from '../components/SearchCard';
@@ -22,13 +22,27 @@ const SearchContainer = () => {
     const Search_Query = location.state.Query;
 
     const [Items, setItems] = useState([]);
+    const [PrintItems, setPrintItems] = useState([]);
 
     const [Query, setQuery] = useState('');
+
+    const [ResultCnt, setResultCnt] = useState(0);
 
     const handleQuery = (e) => {
         setQuery(e.target.value);
     };
 
+    const handleResultCnt = () => {
+        setResultCnt(ResultCnt + 5);
+    };
+
+    useEffect(() => {
+        setPrintItems(Items.slice(undefined, ResultCnt > Items.length ? Items.length : ResultCnt));
+    }, [Items]);
+
+    useEffect(() => {
+        setPrintItems(Items.slice(undefined, ResultCnt > Items.length ? Items.length : ResultCnt));
+    }, [ResultCnt]);
 
     useEffect(() => {
         console.log(Search_Query);
@@ -39,6 +53,7 @@ const SearchContainer = () => {
             if (Data[i].PRDUCT.indexOf(Search_Query) !== -1 || Data[i].ENTRPS.indexOf(Search_Query) !== -1) items.push(Data[i]);
         }
 
+        setResultCnt(5);
         setItems(items);
     }, [Search_Query]);
 
@@ -59,7 +74,7 @@ const SearchContainer = () => {
                     <div className="SubSearchBar">
                         <Search
                             size='large'
-                            placeholder={Search_Query}
+                            placeholder={Search_Query !== "" ? Search_Query : "AdSearch 검색"}
                             onSearch={() => {history.push({
                                 pathname: "/search",
                                 state: {Query: Query}
@@ -74,11 +89,11 @@ const SearchContainer = () => {
                         </div>
                         <div style={{ alignItems: 'center', justifyContent: 'center', width: 1200 }}>
                             {Items.length > 0 ? 
-                            Items.map((data) => {
-                                return <SearchCard data={data} />
+                            PrintItems.map((data) => {
+                                return <SearchCard data={data} query={Search_Query} />
                             })
-                            : <div>
-                                <h3><strong>{Search_Query}</strong>와(과) 일치하는 검색결과가 없습니다.</h3>
+                            : <div className="NoDataView">
+                                <h3><strong>{Search_Query}</strong>와(과) 관련된 검색결과가 없습니다.</h3>
                                 <ul>
                                     <li>모든 단어의 철자가 정확한지 확인하세요.</li>
                                     <li>다른 검색어를 사용해 보세요.</li>
@@ -86,6 +101,13 @@ const SearchContainer = () => {
                             </div>}
                         
                         </div>
+                    </div>
+                    <div>
+                    {Items.length > ResultCnt ?
+                    <Button block onClick={handleResultCnt}>
+                        더 찾아보기
+                    </Button>
+                    : ""}
                     </div>
                 </div>
             </div>
