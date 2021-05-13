@@ -43,7 +43,7 @@ const MainContainer = () => {
                     </div>
                 </div>
                     <div className="About">
-                        <Button type="default" shape="round" size="large">
+                        <Button type="default" shape="round" size="large" onClick={() => {history.push({pathname: "/about"})}}>
                             AdSearch 더 알아보기
                         </Button>
                     </div>
