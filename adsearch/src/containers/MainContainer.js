@@ -47,9 +47,6 @@ const MainContainer = () => {
                             AdSearch 더 알아보기
                         </Button>
                     </div>
-                <div className="footer">
-                    
-                </div>
             </div>
         </Fragment>
     );

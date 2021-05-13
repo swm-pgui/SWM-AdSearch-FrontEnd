@@ -2,23 +2,21 @@
 
 .App {
   display: grid;
-  grid-template-columns: repeat(1, 2fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 
   font-family: 'Noto Sans KR', sans-serif;
 
   width: 100%;
   height: 100%;
-
+  text-align: center;
 }
 
 .main{
-  grid-column: 1;
-  grid-row: 1;
-}
+  width: 100%;
+  height: 100%;
 
-.footer{
-  grid-column: 1;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .LogoBox{
@@ -50,4 +48,8 @@
 .SearchBar {
   width: 100%;
   margin-top: 50px;
+}
+
+.About{
+  margin-bottom: 100px;
 }
