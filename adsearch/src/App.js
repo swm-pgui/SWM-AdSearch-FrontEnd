@@ -1,14 +1,18 @@
 import React from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
+import { BrowserRouter, Route } from 'react-router-dom'; //React-Router import
 
+import MainContainer from './containers/MainContainer';
 import SearchContainer from './containers/SearchContainer';
 
 const App = () => {
   return (
     <div>
-      <h1 className='App'>식품 허위 · 과대광고정보 알리미</h1>
-      <SearchContainer />
+      <BrowserRouter>
+        <Route exact path="/" component={MainContainer} />
+        <Route exact path="/search" component={SearchContainer} />
+      </BrowserRouter>
     </div>
   )
 }
