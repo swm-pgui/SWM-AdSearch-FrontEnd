@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './SearchCard.css';
 
 
+
 const SearchCard = ({ data, query }) => {
     const { json_data } = data;
     const PRDUCT = data["name"];
