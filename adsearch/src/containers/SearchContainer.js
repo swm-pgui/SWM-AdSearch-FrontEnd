@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { Input, Button } from 'antd';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import SearchCard from '../components/SearchCard';
 import CardData from '../datas/CardData.json';
@@ -13,7 +14,6 @@ import './SearchContainer.css';
 
 const { Search } = Input;
 
-const Data = CardData.body.items;
 
 const SearchContainer = () => {
     const history = useHistory();
@@ -22,6 +22,7 @@ const SearchContainer = () => {
     const Search_Query = location.state.Query;
 
     const [Items, setItems] = useState([]);
+    const [Data, setData] = useState([]);
     const [PrintItems, setPrintItems] = useState([]);
 
     const [Query, setQuery] = useState('');
@@ -37,6 +38,7 @@ const SearchContainer = () => {
     };
 
     useEffect(() => {
+        console.log(Items.slice(undefined, ResultCnt > Items.length ? Items.length : ResultCnt));
         setPrintItems(Items.slice(undefined, ResultCnt > Items.length ? Items.length : ResultCnt));
     }, [Items]);
 
@@ -47,14 +49,25 @@ const SearchContainer = () => {
     useEffect(() => {
         console.log(Search_Query);
 
-        let items = [];
 
-        for (var i = 0; i < Data.length; i++) {
-            if (Data[i].PRDUCT.indexOf(Search_Query) !== -1 || Data[i].ENTRPS.indexOf(Search_Query) !== -1) items.push(Data[i]);
+        const fetchDatas = async () => {
+            window
+            .fetch('http://bonggeun.com:8080/search?query=' + location.state.Query)
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                setItems(data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         }
 
+        fetchDatas();
+        console.log(Data);
+
         setResultCnt(5);
-        setItems(items);
+        //setItems(Data);
     }, [Search_Query]);
 
 
