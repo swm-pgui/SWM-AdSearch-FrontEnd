@@ -18,13 +18,9 @@
 - 사용자 제보 등 데이터 수집도구로서의 기능 개발
 - 데이터 분석을 통해 부가적인 기능 개발
 
-### 사용 라이브러리
+### 사용 오픈소스 API
 
-[Ant Design | UI/UX 디자인](https://ant.design/)
-
-[G2Plot | 차트 생성](https://g2plot.antv.vision/)
-
-[axios | API 통신](https://github.com/axios/axios)
+[공공데이터 포털 | 식품의약품안전처_식품 허위·과대광고정보](https://www.data.go.kr/data/15058599/openapi.do)
 
 ## 👯 FrontEnd
 
